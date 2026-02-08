@@ -81,7 +81,7 @@ def list_appointments():
 # ---------------------------
 
 root = tk.Tk()
-root.title("Dental Office Manager")
+root.title("Dental Office Program")
 root.geometry("700x500")
 
 notebook = ttk.Notebook(root)
