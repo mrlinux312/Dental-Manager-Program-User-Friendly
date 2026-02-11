@@ -5,9 +5,9 @@ import datetime
 patients = {}
 appointments = []
 
-# ---------------------------
+
 # Patient Functions
-# ---------------------------
+
 
 def add_patient():
     pid = entry_pid.get().strip()
@@ -39,9 +39,9 @@ def list_patients():
     for pid, info in patients.items():
         listbox.insert(tk.END, f"ID: {pid} | {info['name']} | {info['phone']} | {info['notes']}")
 
-# ---------------------------
+
 # Appointment Functions
-# ---------------------------
+
 
 def schedule_appointment():
     pid = entry_appt_pid.get().strip()
@@ -76,9 +76,9 @@ def list_appointments():
         p = patients[appt["patient_id"]]["name"]
         listbox.insert(tk.END, f"{appt['datetime']} | {p} | {appt['reason']}")
 
-# ---------------------------
+
 # GUI Setup
-# ---------------------------
+
 
 root = tk.Tk()
 root.title("Dental Office Program")
@@ -87,9 +87,9 @@ root.geometry("700x500")
 notebook = ttk.Notebook(root)
 notebook.pack(fill="both", expand=True)
 
-# ---------------------------
+
 # Add Patient Tab
-# ---------------------------
+
 
 tab1 = ttk.Frame(notebook)
 notebook.add(tab1, text="Add Patient")
@@ -112,9 +112,9 @@ entry_notes.pack()
 
 tk.Button(tab1, text="Add Patient", command=add_patient).pack(pady=10)
 
-# ---------------------------
+
 # Schedule Appointment Tab
-# ---------------------------
+
 
 tab2 = ttk.Frame(notebook)
 notebook.add(tab2, text="Schedule Appointment")
@@ -137,9 +137,9 @@ entry_reason.pack()
 
 tk.Button(tab2, text="Schedule", command=schedule_appointment).pack(pady=10)
 
-# ---------------------------
+
 # View Data Tab
-# ---------------------------
+
 
 tab3 = ttk.Frame(notebook)
 notebook.add(tab3, text="View Records")
